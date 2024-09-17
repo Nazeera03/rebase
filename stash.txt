@@ -1,0 +1,221 @@
+nazee@LAPTOP-V2I658GK MINGW64 /c
+$ mkdir savita
+
+nazee@LAPTOP-V2I658GK MINGW64 /c
+$ cd savita
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita
+$ git init
+Initialized empty Git repository in C:/savita/.git/
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git branch
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git branch
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git add .
+warning: in the working copy of '123.txt', LF will be replaced by CRLF the next time Git touches it
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git branch
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git branch branch1
+fatal: not a valid object name: 'master'
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git branch
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git add .
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git commit -m "hi"
+[master (root-commit) 3a11b8b] hi
+ 1 file changed, 1 insertion(+)
+ create mode 100644 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git branch
+* master
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git branch cse
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git branch
+  cse
+* master
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git checkout cse
+Switched to branch 'cse'
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ nano abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ git add .
+warning: in the working copy of 'abc.txt', LF will be replaced by CRLF the next time Git touches it
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ git commit -m "hello"
+[cse c5a9697] hello
+ 1 file changed, 2 insertions(+)
+ create mode 100644 abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ git stash
+No local changes to save
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ nano 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ nano abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ git checkout master
+Switched to branch 'master'
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git stash apply
+No stash entries found.
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git add .
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git commit -m "hello"
+[master 9a70ce6] hello
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git stash apply
+No stash entries found.
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git stash
+No local changes to save
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git add .
+warning: in the working copy of '123.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'abc.txt', LF will be replaced by CRLF the next time Git touches it
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git commit -m "heyy"
+[master 7165ab5] heyy
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git stash
+No local changes to save
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ nano 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git stash
+warning: in the working copy of '123.txt', LF will be replaced by CRLF the next time Git touches it
+Saved working directory and index state WIP on master: 7165ab5 heyy
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (master)
+$ git checkout cse
+Switched to branch 'cse'
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ nano 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ nano abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ git stash apply
+Auto-merging 123.txt
+CONFLICT (content): Merge conflict in 123.txt
+On branch cse
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   123.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ git add .
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ git commit -m "apply"
+[cse 5e6f5b8] apply
+ 1 file changed, 5 insertions(+)
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ nano abc.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ git stash apply
+Auto-merging 123.txt
+CONFLICT (content): Merge conflict in 123.txt
+On branch cse
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   123.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ git add 123.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/savita (cse)
+$ git commit -m "hellloo"
+[cse 0b5bbfc] hellloo
+ 1 file changed, 3 insertions(+)

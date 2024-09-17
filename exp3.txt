@@ -1,0 +1,124 @@
+nazee@LAPTOP-V2I658GK MINGW64 /c
+$ cd program3
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3
+$ git init
+Initialized empty Git repository in C:/program3/.git/
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git  status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ nano p3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git add .
+warning: in the working copy of 'p3.txt', LF will be replaced by CRLF the next time Git touches it
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git commit -m "hi"
+[master (root-commit) ed9a1fc] hi
+ 1 file changed, 4 insertions(+)
+ create mode 100644 p3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git branch
+* master
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git branch latest
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git branch
+  latest
+* master
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git checkout latest
+Switched to branch 'latest'
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (latest)
+$ nano pgm3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (latest)
+$ git checkout master
+Switched to branch 'master'
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ nano p3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ nano pgm3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git stash
+No local changes to save
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ nano p3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ nano pgm3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git stash
+warning: in the working copy of 'p3.txt', LF will be replaced by CRLF the next time Git touches it
+Saved working directory and index state WIP on master: ed9a1fc hi
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git checkout latest
+Switched to branch 'latest'
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (latest)
+$ nano p3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (latest)
+$ nano pgm3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (latest)
+$ git stash apply
+error: Your local changes to the following files would be overwritten by merge:
+        p3.txt
+Please commit your changes or stash them before you merge.
+Aborting
+On branch latest
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   p3.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        pgm3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git stash -u
+Saved working directory and index state WIP on master: ed9a1fc hi
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (master)
+$ git checkout latest
+Switched to branch 'latest'
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (latest)
+$ git stash apply
+Already up to date.
+pgm3.txt already exists, no checkout
+error: could not restore untracked files from stash
+On branch latest
+nothing to commit, working tree clean
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (latest)
+$ nano p3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (latest)
+$ nano pgm3.txt
+
+nazee@LAPTOP-V2I658GK MINGW64 /c/program3 (latest)
+$
